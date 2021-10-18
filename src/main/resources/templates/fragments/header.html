@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="header" th:fragment="header">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Team Five Air</a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:link="/cheapest-flight-date">Diman</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:link="/search_flights">Reni</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:link="/cheapest-flight-month">Niki B</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:link="/cheapest-flight">Niki M</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" th:link="/statistics">Statistics</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+</body>
+</html>

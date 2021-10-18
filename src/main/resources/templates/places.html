@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Amazing title</title>
+</head>
+<body>
+<div th:fragment="placeList" id="results-block">
+  <ul>
+    <li th:each="place :${withList.places}">
+      <span th:text=" ${place.placeName} "> - </span>
+      <span th:text=" ${place.placeId}"></span>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

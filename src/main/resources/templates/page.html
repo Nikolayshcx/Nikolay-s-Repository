@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+    <h1>Form</h1>
+    <form action="#" th:action="@{api/v1/cheapestFlight}"  method="get">
+      <input id="origin" required type="text" th:field="*{origin}"/>
+      <input id="destination" required type="text" th:field="*{destination}"/>
+      <input id="outboundDate" required type="text" th:field="*{outboundDate}"/>
+      <input type="submit" value="getCheapestFlight"/>
+    </form>
+
+
+</body>
+</html>

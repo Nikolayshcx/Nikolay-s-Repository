@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Flights</title>
+</head>
+<body>
+<table>
+  <thead>
+  <tr>
+    <th> Price </th>
+    <th> Direct </th>
+    <th> Origin </th>
+    <th> Destination </th>
+    <th> Departure Date </th>
+    <th> Carriers </th>
+    <th> Date of quote</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="quote : ${list}">
+    <td><span th:text="${quote.price}">  </span></td>
+    <td><span th:text="${quote.direct}"> </span></td>
+    <td><span th:text="${quote.outBoundLeg.origin}"> </span></td>
+    <td><span th:text="${quote.outBoundLeg.destination}"> </span></td>
+    <td><span th:text="${quote.outBoundLeg.departureDate.toLocalDate()}"> </span></td>
+    <td>
+      <ul><li th:each="carrier : ${quote.outBoundLeg.carriers}">
+        <span th:text="${carrier}"></span>
+      </li>
+      </ul></td>
+    <td><span th:text="${quote.quoteDateTime}"> </span></td>
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
